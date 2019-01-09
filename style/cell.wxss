@@ -1,0 +1,116 @@
+/** 表单的标题 **/
+
+.cells-title {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding-left: 15px;
+    color: #888;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.cells {
+    position: relative;
+    margin-top: 1.17647059em;
+    background-color: #fff;
+    line-height: 1.41176471;
+    font-size: 17px;
+}
+
+.cells-after-title {
+    margin-top: 0;
+}
+
+.cells:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1rpx solid #e5e5e5;
+    color: #e5e5e5;
+}
+
+.cells:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1rpx solid #e5e5e5;
+    color: #e5e5e5;
+}
+
+.cells-tips {
+    margin-top: 5px;
+    color: #b2b2b2;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 12px;
+}
+
+.cell {
+    padding: 10px 15px;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.cell:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1rpx solid #e5e5e5;
+    color: #e5e5e5;
+    left: 15px;
+}
+
+.cell:first-child:before {
+    display: none;
+}
+
+/** 选中的状态 **/
+
+.cell-hover {
+    background-color: #ececec;
+}
+
+.cell-primary {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+}
+
+.cell-bd {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.cell-ft {
+    text-align: right;
+    color: #999;
+}
+
+.cell-ft-rightarrow {
+    position: relative;
+    padding-right: 15px;
+}
+
+.cell-ft-rightarrow:after {
+    position: absolute;
+    content: '>';
+    right: 0;
+}
+
+.cell-label {
+    padding-right: 10px;
+}

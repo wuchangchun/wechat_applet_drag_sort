@@ -1,0 +1,30 @@
+<scroll-view style="height:{{screenHeight}}px;" scroll-y="{{isscroll}}" bindscroll="scroll" scroll-top="{{scrollTop}}">
+
+<form bindsubmit="formSubmit">
+    <view class="cells-title">门店商品图片管理</view>
+    <view class="inner">
+        <movable-area>
+            <block wx:for="{{data}}" wx:for-index="idx" wx:for-item="item">
+                <view class="item {{(index == beginIndex) && disabled && !hidden? 'move' : ''}}" data-index="{{idx}}" bindlongpress="_longtap" bindtouchstart="touchs" bindtouchend="touchend" bindtouchmove="touchm">
+                    <image lazy-load="true" src="http://img.taocaiku.com/{{item.img}}@200w_200h_1c_1e_50Q.jpg" mode="aspectFill"></image>
+                    <view class="delBtn" catchtap="bindRemoveImg" data-idx="{{idx}}">删除</view>
+                </view>
+            </block>
+            <block wx:if="{{data.length < maximg}}">
+                <view class="item addbtn" bindtap="bindUploadImage">
+                    <view class="icon_add">
+                        <image mode="aspectFill" src="/res/images/icon_add.png"></image>
+                        <view class="txt">上传</view>
+                    </view>
+                </view>
+            </block>
+            <movable-view x="{{x}}" y="{{y}}" direction="all" damping="{{5000}}" friction="{{1}}" disabled="{{disabled}}">
+                <view class="item-move" hidden='{{hidden}}'></view>
+            </movable-view>
+        </movable-area>
+    </view>
+    <view class="btn-area">
+        <button type="primary" formType="submit">保存</button>
+    </view>
+</form>
+</scroll-view>

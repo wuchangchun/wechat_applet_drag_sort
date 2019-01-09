@@ -1,0 +1,74 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+
+page{
+  background: #eee;
+}
+
+/** 覆盖默认的primary按钮 **/
+button[type="primary"] {
+  background-color: #E23E3D;
+}
+.button-hover[type="primary"],button[loading][type="primary"]{
+  background-color: #CA3736;
+}
+
+/** 修改默认的小按钮 **/
+button[size="mini"] {
+  display:inline-block;
+  line-height:34px;
+  font-size:14px;
+  height: 34px;
+  box-sizing: border-box;
+  padding:0 1.34em;
+}
+
+/** 按钮叠按钮 **/
+button + button{
+  margin-top:10px;
+}
+
+
+/** 提交按钮容器 **/ 
+.btn-area {
+  margin: 30px 15px 10px;
+}
+
+
+/** 颜色 **/
+/** 主色，红 **/
+.color-primary{
+  color:#E23E3D;
+}
+/** 黄色 **/
+.color-yellow{
+  color:#FBBC2F;
+}
+/** 灰色 **/
+.color-cement{
+  color:#b2b2b2;
+}
+
+
+/** 上啦加载的 加载中 横向一大块 **/
+.loading{
+  text-align: center;
+  font-size: 14px;
+  color:#888;
+  padding: 30px 0;
+}
+
+
+/** 文字方向对其 **/
+.text-right{
+  text-align: right;
+}
